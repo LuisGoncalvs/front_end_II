@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1</title>
+</head>
+
+<body>
+    <script>
+        let notas = [9, 5, 8, 6];
+        let media = notas.reduce(function (totalizador, elemento) {
+            console.log("Sua nota atual é " + totalizador)
+            return totalizador + elemento
+        });
+        console.log("Sua nota atual é " + media)
+
+        let resultado = media / notas.length;
+
+        console.log("Sua média é " + resultado);
+
+        let exibicao = notas.forEach(
+            function mostrar(elemento, i) {
+                console.log(`Parabéns pela conclusão do ${i + 1} bimestre sua nota foi ${elemento}`)
+            }
+        )
+
+        function aprovar() {
+            if (media > 7) {
+                console.log("Você foi aprovado");
+            }
+            else {
+                console.log("Você não foi aprovado");
+            }
+        }
+
+        aprovar();
+
+    </script>
+</body>
+
+</html>
